@@ -1,0 +1,6 @@
+[httpserver]
+    port = 0
+
+[download]
+    in_build = true
+    maven_repo = http://central.maven.org/maven2/
