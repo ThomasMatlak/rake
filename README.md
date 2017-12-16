@@ -43,7 +43,7 @@ public class Main {
 
 Contributing
 ------------
-If you wish to contribute to this library, you'll need [Buck](buckbuild.com) to build it. Once you have Buck 
+If you wish to contribute to this library, you'll need [Buck](http://buckbuild.com) to build it. Once you have Buck 
 installed, it's as simple as:
 
 ```bash
