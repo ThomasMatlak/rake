@@ -35,9 +35,7 @@ public class Main {
     public static void main(String[] args) {
         String languageCode = RakeLanguages.ENGLISH;
         String rake = new Rake(languageCode);
-        LinkedHashMap<String, Double> results = rake.getKeywordsFromText(
-        	"Your text would go here."
-    	));
+        LinkedHashMap<String, Double> results = rake.getKeywordsFromText("Your text would go here."));
     	System.out.println(results);
     }
 }
