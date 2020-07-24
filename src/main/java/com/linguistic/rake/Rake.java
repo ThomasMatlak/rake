@@ -1,7 +1,5 @@
 package com.linguistic.rake;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,11 +16,9 @@ import java.util.*;
  * Implementation based on https://github.com/aneesha/RAKE
  */
 public class Rake {
-    String language;
-    String stopWordsPattern;
+    private final String stopWordsPattern;
 
-    Rake(String language) {
-        this.language = language;
+    public Rake(String language) {
 
         // Read the stop words file for the given language
         InputStream stream = this.getClass().getResourceAsStream("/data/stopwords/stopwords/stopwords-0.1/languages/" + language + ".txt");
@@ -78,7 +74,7 @@ public class Rake {
             String current = word.trim().toLowerCase();
             int len = current.length();
 
-            if (len > size && len > 0 && !StringUtils.isNumeric(current))
+            if (len > size && len > 0 && !current.chars().allMatch(Character::isDigit))
                 words.add(current);
         }
 

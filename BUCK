@@ -5,6 +5,5 @@ java_library(
     srcs = glob([
         "src/**/*.java"
     ]),
-    deps = ["//vendor/apache-commons:commons-lang3"],
     resources = ["//data:stopwords"]
 )
